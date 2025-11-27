@@ -1,29 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Attention Countdown</title>
-  styles.css
-  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="wrap">
-    <div id="banner" class="banner">🔔 Alarm ON — Maintenance window approaching — please prepare!</div>
-
+    <div class="banner" id="banner">⚠️ ATTENTION: Maintenance window approaching — please prepare!</div>
     <h1 id="title">Countdown to Next Maintenance Window</h1>
-    <p class="muted">Target: <span id="targetDate">—</span></p>
-
-    <div id="timer" class="timer glow">
+    <div class="timer" id="timer">
       <div class="block"><span id="days">0</span><small>Days</small></div>
       <div class="block"><span id="hours">00</span><small>Hours</small></div>
       <div class="block"><span id="minutes">00</span><small>Minutes</small></div>
       <div class="block"><span id="seconds">00</span><small>Seconds</small></div>
     </div>
-
-    <p class="helper">Press <kbd>F11</kbd> to toggle fullscreen • <kbd>Space</kbd> to mute/unmute alarm • <kbd>B</kbd> to toggle banner</p>
+    <p id="info" class="muted">Target: <span id="targetDate"></span></p>
+    <audio id="alarm" preload="auto">
+      <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAAA=" type="audio/wav" />
+    </audio>
+    <div class="helper">
+      <span>Press <kbd>F11</kbd> to toggle fullscreen • <kbd>Space</kbd> to mute/unmute alarm • <kbd>B</kbd> to toggle banner</span>
+    </div>
   </div>
-  script.js</script>
+  <script src="script.js"></script>
 </body>
 </html>
