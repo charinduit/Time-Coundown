@@ -2,101 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Banking System Go‑Live Reminder</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countdown Dashboard</title>
   <link rel="stylesheet" href="styles.css" />
-  <meta name="color-scheme" content="light dark">
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 4v6c0 5-4 9-9 10-5-1-9-5-9-10V6l9-4zm0 3.09L6 7.32v4.97c0 4.17 3.17 7.71 6 8.53 2.83-.82 6-4.36 6-8.53V7.32L12 5.09z" fill="currentColor"/></svg>
-      <div>
-        <h1>Go‑Live Status</h1>
-        <p class="sub">Merchant Bank of Sri Lanka & Finance PLC — Core Banking</p>
+  <div class="container">
+    <h1 id="title">Countdown Timer</h1>
+    <div id="timer" class="timer">--</div>
+
+    <form id="configForm" class="config">
+      <label>
+        <span>Target Date & Time:</span>
+        <input type="datetime-local" id="targetInput" required />
+      </label>
+      <label>
+        <span>Title (optional):</span>
+        <input type="text" id="titleInput" placeholder="e.g., Go-Live" />
+      </label>
+      <div class="actions">
+        <button type="submit">Save</button>
+        <button type="button" id="resetBtn">Reset</button>
       </div>
-    </div>
-    <button id="themeToggle" title="Toggle theme" aria-label="Toggle theme">🌓</button>
-  </header>
-
-  <main class="container">
-    <!-- Config panel -->
-    <section class="panel">
-      <h2>Configuration</h2>
-      <form id="configForm" class="grid">
-        <label>
-          <span>Go‑Live Date & Time (Asia/Colombo)</span>
-          <input type="datetime-local" id="goliveInput" required />
-        </label>
-        <label>
-          <span>Next Milestone Deadline</span>
-          <input type="datetime-local" id="deadlineInput" />
-        </label>
-        <label>
-          <span>Reminder Window (days)</span>
-          <input type="number" id="reminderDays" min="0" value="7" />
-        </label>
-        <label>
-          <span>Title (optional)</span>
-          <input type="text" id="titleInput" placeholder="e.g., Post‑Go‑Live Hardening" />
-        </label>
-        <div class="actions">
-          <button type="submit" class="btn primary">Save</button>
-          <button type="button" id="resetBtn" class="btn">Reset</button>
-        </div>
-      </form>
-      <p class="hint">Tip: You can also set values using URL params: <code>?golive=2025-11-20T09:00&deadline=2025-12-05T17:00&title=Hardening</code></p>
-    </section>
-
-    <!-- Status cards -->
-    <section class="cards">
-      <article class="card accent">
-        <h3>Time Since Go‑Live</h3>
-        <div class="time big" id="sinceGolive">—</div>
-        <p class="desc">Live in production and counting up.</p>
-      </article>
-
-      <article class="card">
-        <h3>Countdown to Next Milestone</h3>
-        <div class="time big" id="countdown">—</div>
-        <p class="desc" id="deadlineLabel">No deadline set.</p>
-      </article>
-
-      <article class="card">
-        <h3>Reminder Status</h3>
-        <div class="status-row">
-          <span id="reminderBadge" class="badge">No reminder</span>
-        </div>
-        <ul class="bullets" id="reminderBullets"></ul>
-      </article>
-    </section>
-
-    <!-- Progress bar -->
-    <section class="panel">
-      <h2 id="progressTitle">Milestone Progress</h2>
-      <div class="progress">
-        <div class="progress-bar" id="progressBar" style="width:0%"></div>
-      </div>
-      <div class="progress-meta"><span id="progressPct">0%</span> complete</div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div>
-        <span id="footerTitle">—</span>
-        <span>• Updated <time id="now">—</time></span>
-      </div>
-      <div class="links">
-        <a href="https://github.com/charinduit/Time-Coundown" target="_blank" rel="noopener">Repo</a>
-        <a href="#" id="shareLink">Share Link</a>
-      </div>
-    </footer>
-  </main>
-
+    </form>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
