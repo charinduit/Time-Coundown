@@ -1,29 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Attention Countdown</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <title>Redirecting to Countdown…</title>
+  <meta http-equiv="refresh" content="0; url=/Time-Coundown/dev-monitor/index.html">
+  /Time-Coundown/dev-monitor/index.html
+  <style>
+    body { font-family: system-ui, Segoe UI, Arial; display:flex; align-items:center; justify-content:center; height:100vh; background:#0b0f1a; color:#e8eefb; }
+    a { color:#4da3ff; }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="banner" id="banner">⚠️ ATTENTION: Maintenance window approaching — please prepare!</div>
-    <h1 id="title">Countdown to Next Maintenance Window</h1>
-    <div class="timer" id="timer">
-      <div class="block"><span id="days">0</span><small>Days</small></div>
-      <div class="block"><span id="hours">00</span><small>Hours</small></div>
-      <div class="block"><span id="minutes">00</span><small>Minutes</small></div>
-      <div class="block"><span id="seconds">00</span><small>Seconds</small></div>
-    </div>
-    <p id="info" class="muted">Target: <span id="targetDate"></span></p>
-    <audio id="alarm" preload="auto">
-      <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAAA=" type="audio/wav" />
-    </audio>
-    <div class="helper">
-      <span>Press <kbd>F11</kbd> to toggle fullscreen • <kbd>Space</kbd> to mute/unmute alarm • <kbd>B</kbd> to toggle banner</span>
-    </div>
+  <div>
+    Redirecting… If not redirected, /Time-Coundown/dev-monitor/index.htmlclick here</a>.
   </div>
-  <script src="script.js"></script>
+  <script>
+    // JS fallback (some browsers ignore meta refresh)
+    location.replace('/Time-Coundown/dev-monitor/index.html');
+  </script>
 </body>
 </html>
