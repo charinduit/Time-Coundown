@@ -1,7 +1,7 @@
 // Hardcoded title and target date/time (local time)
 const title = 'Countdown to Next Maintenance Window';
 // !!! Set your target below (local time ISO or parseable string)
-const targetDate = new Date('2025-12-31T23:59:59');
+const targetDate = new Date('2025-12-01T23:59:59');
 
 // Init UI
 const titleEl = document.getElementById('title');
