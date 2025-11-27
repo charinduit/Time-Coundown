@@ -1,5 +1,5 @@
 // Hardcoded title and target date/time (local time)
-const title = 'Countdown to Next Maintenance Window';
+const title = 'Countdown to SYSTEM LIVE';
 // !!! Set your target below (local time ISO or parseable string)
 const targetDate = new Date('2025-12-31T23:59:59');
 
